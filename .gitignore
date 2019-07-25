@@ -1,0 +1,8 @@
+# node_modules will be too big!
+node_modules
+# just in case the package-lock has something in there
+package-lock.json
+# for mac users only, windows no need
+.DS_Store 
+
+.idea/
