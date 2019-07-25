@@ -1,0 +1,25 @@
+sudo instead of npm for mac users
+
+
+## terminal commands:
+
+npm init -y
+
+npm i express mongoose if-env morgan bcryptjs passport cors passport-jwt passport-local jwt-simple validator
+
+npm i --save-dev concurrently
+
+.gitignore - node_modules, package-lock.json, .DS_Store, .idea/
+
+## inside package.json 
+
+Delete scripts -->   "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+}
+ 
