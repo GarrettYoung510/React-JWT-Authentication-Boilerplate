@@ -7,10 +7,9 @@ const ExtractJwt = require("passport-jwt").ExtractJwt;
 const LocalStrategy = require("passport-local");
 
 // Create local strategy
-
-// By default LocalStrategy it is expecting a username(email) and a password
+// By default LocalStrategy it is expecting a username(not an email) and a password
+// We override that with the following code
 const localOptions = { usernameField: "email" };
-
 // creates new local strategy to login
 const localLogin = new LocalStrategy(
   localOptions,

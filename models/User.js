@@ -1,4 +1,4 @@
-// dependencies
+// dependencies for our "User" model
 const mongoose = require("mongoose");
 // for encryption
 const bcrypt = require("bcryptjs");

@@ -43,6 +43,7 @@ module.exports = {
   },
 
   signIn: (req, res) => {
-    res.send("im hit");
+    // res.send("im hit"); // to check if this is being hit
+    res.send({token: tokenForUser(req.user)});
   }
 };
