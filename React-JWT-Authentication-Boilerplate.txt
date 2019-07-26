@@ -78,7 +78,14 @@ when we save our users password it is a random hash,
 
 
 
+## test in postman
 
+signup
+
+get token
+
+go to /test/
+header key authorization value is token
 
 
 
