@@ -58,4 +58,8 @@ JSON web tokens and passport
 
 ## services
 third party services ex. stripe api or oauth 
-passport
+
+passport - logs in user for us
+JwtStrategy
+
+when we save our users password it is a random hash, 
