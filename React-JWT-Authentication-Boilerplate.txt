@@ -45,11 +45,12 @@ index.js
 object for require 
 
 User.js
-mongoose, mongoose schema
+mongoose, mongoose schema, validator, bcrypt
 
-to set up a mongoose schema:
+bcrypt salt & hash: salt = random characters, hash is user password + salt even more secure gets hashed by bcrypt
 
 ## controllers
 
 authcontrollers.js
 require models to access data, then sign up async
+link to 

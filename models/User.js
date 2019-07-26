@@ -1,16 +1,18 @@
 // dependencies
 const mongoose = require("mongoose");
+// for encryption
+const bcrypt = require("bcryptjs");
 // mongoose schema
 const Schema = mongoose.Schema;
 // how to validate npm package in google
-const validator = require('validator');
+const validator = require("validator");
 
-const validateEmail = function(email){
-  return validator.isEmail(email);  
+const validateEmail = function(email) {
+  return validator.isEmail(email);
 };
 
 // create the new schema
-const userSchema = new Schema({
+const UserSchema = new Schema({
   email: {
     type: String,
     unique: true,
@@ -18,9 +20,7 @@ const userSchema = new Schema({
     lowercase: true,
     // validate that the email is correct format
     // takes an array or function [functiontocall, errormsg]
-    validate: [validateEmail,
-    'Please enter a valid email address'
-    ],
+    validate: [validateEmail, "Please enter a valid email address"]
   },
   password: {
     type: String,
@@ -28,7 +28,28 @@ const userSchema = new Schema({
   }
 });
 
-const User = mongoose.model("User", userSchema);
+UserSchema.pre("save", async function(next) {
+  // to make this clearer for me, this = user
+  const user = this;
+  try {
+    // create a salt - random 10 characters for encryption
+    const salt = await bcrypt.genSalt();
+    console.log('salt', salt);
+    // create a hash - one way changes string into a hash
+    // user password and salt will be hashed
+    const hash = await bcrypt.hash(user.password, salt);
+    console.log('hash', hash);
+    // saves hash as the password instead of the users password
+    user.password = hash;
+    // so it does not hang
+    next();
+  } catch (e) {
+    // so it moves on to what is next and error msg if one
+    return next(e);
+  }
+});
+
+const User = mongoose.model("User", UserSchema);
 module.exports = User;
 
 // OR
