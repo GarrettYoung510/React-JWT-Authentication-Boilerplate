@@ -53,4 +53,9 @@ bcrypt salt & hash: salt = random characters, hash is user password + salt even 
 
 authcontrollers.js
 require models to access data, then sign up async
-link to 
+sign in
+JSON web tokens and passport 
+
+## services
+third party services ex. stripe api or oauth 
+passport

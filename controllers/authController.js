@@ -29,5 +29,9 @@ module.exports = {
         // send 404 status and what error they got back
         res.status(404).json({e});
     }
+  },
+
+  signIn: (req, res) => {
+      res.send('im hit');
   }
 };
