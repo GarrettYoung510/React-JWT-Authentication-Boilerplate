@@ -1,5 +1,5 @@
 sudo instead of npm for mac users
-
+rm -rf .git (if cloning)
 
 ## terminal commands:
 
@@ -33,3 +33,23 @@ const cors = require("cors");
 morgan lets us know what request was made, status, how long it took, and what the response and how long it took the response
 
 cors if proxy does not work, take in any request coming from any servers or we can make it only at a specific port, can configure cors to take from anywhere so proxy is not even needed. cors always being used by our browser.
+
+## index.js routes folder
+const router = require('express').Router();
+
+## index.js routes/apiRoutes folder
+
+## models
+index.js
+
+object for require 
+
+User.js
+mongoose, mongoose schema
+
+to set up a mongoose schema:
+
+## controllers
+
+authcontrollers.js
+require models to access data, then sign up async
