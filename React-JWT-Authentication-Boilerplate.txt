@@ -60,6 +60,35 @@ JSON web tokens and passport
 third party services ex. stripe api or oauth 
 
 passport - logs in user for us
-JwtStrategy
+JwtStrategy - JSON Web Tokens
+- userid + secret, the only time someone can hack us is if they know the secret and nobody else can find this because we gitignored it (extra protection for us)
+
 
 when we save our users password it is a random hash, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
