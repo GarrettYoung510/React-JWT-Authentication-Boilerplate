@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 
 const Button = props => {
     return <button onClick={props.handleClick}>{props.children}</button>
