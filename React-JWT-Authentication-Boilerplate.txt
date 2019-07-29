@@ -66,18 +66,6 @@ JwtStrategy - JSON Web Tokens
 
 when we save our users password it is a random hash, 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## test in postman
 
 signup
@@ -88,9 +76,11 @@ go to /test/
 header key authorization value is token
 
 
+# create-front-end branch
 
-
-
+## client folder
+node packages:
+npm i axios react-redux react-router-dom redux redux-form redux-thunk
 
 
 
