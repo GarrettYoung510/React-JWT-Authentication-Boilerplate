@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { incrementCounter, decrementCounter } from './../actions/';
 
+import requireAuth from './../containers/hoc/requireAuth';
+
 class Counter extends Component {
   render() {
     
@@ -22,4 +24,4 @@ function mapStateToProps({ counter }){
 }
 
 // const connector = connect()
-export default connect(mapStateToProps, { incrementCounter, decrementCounter })(Counter);
+export default requireAuth(connect(mapStateToProps, { incrementCounter, decrementCounter })(Counter));

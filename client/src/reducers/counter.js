@@ -1,7 +1,7 @@
 import { INCREMENT_COUNTER, DECREMENT_COUNTER } from "../actions/types";
 
 const INITIAL_STATE = {
-  counter: 0
+  counter: 9001
 };
 
 // if state is not passed in as a parameter, pass in initial state
