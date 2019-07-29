@@ -82,7 +82,7 @@ header key authorization value is token
 node packages:
 npm i axios react-redux react-router-dom redux redux-form redux-thunk
 
-
+{props.children} whatever I put between the opening/closing tags is props.children
 
 
 
