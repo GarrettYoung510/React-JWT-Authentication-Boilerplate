@@ -24,16 +24,22 @@
   },
   "homepage": "https://github.com/GarrettYoung510/React-JWT-Authentication-Boilerplate#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "jwt-simple": "^0.5.6",
-    "mongoose": "^5.6.6",
+    "mongoose": "^5.6.7",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.5",
+    "redux-thunk": "^2.3.0",
     "validator": "^11.1.0"
   },
   "devDependencies": {
